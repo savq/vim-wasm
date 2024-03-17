@@ -18,7 +18,7 @@ syn cluster watNotTop contains=watModule,watInstWithType,watInstGetSet,watInstGe
 " Note: memarg (align=,offset=) can be added to memory instructions
 syn match   watInstWithType  "\%((\s*\)\@<=\<\%(i32\|i64\|f32\|f64\|memory\)\.[[:alnum:]_]\+\%(/\%(i32\|i64\|f32\|f64\)\)\=\>\%(\s\+\%(align\|offset\)=\)\=" contained display
 syn match   watInstGeneral   "\%((\s*\)\@<=\<[[:alnum:]_]\+\>" contained display
-syn match   watInstGetSet    "\%((\s*\)\@<=\<\%(local\|global\)\.\%(get\|set\)\>" contained display
+syn match   watInstGetSet    "\%((\s*\)\@<=\<\%(local\|global\)\.\%(get\|set\|tee\)\>" contained display
 " https://webassembly.github.io/spec/core/text/instructions.html#control-instructions
 syn match   watControlInst   "\%((\s*\)\@<=\<\%(block\|end\|loop\|if\|then\|else\|unreachable\|nop\|br\|br_if\|br_table\|return\|call\|call_indirect\)\>" contained display
 " https://webassembly.github.io/spec/core/text/instructions.html#parametric-instructions
